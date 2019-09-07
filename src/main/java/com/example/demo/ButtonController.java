@@ -14,10 +14,20 @@ public class ButtonController{
         return "count";
     }
     
-    @PostMapping("/count")
+    @PostMapping(value="/count", params="countUp")
     public String postRequest(Model model){
         
         N += 1;
+        model.addAttribute("num", N);
+        
+        return "count";
+        
+    }
+    
+    @PostMapping(value="/count", params="Reset")
+    public String resetNum(Model model){
+        
+        N = 0;
         model.addAttribute("num", N);
         
         return "count";

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>カウント</title>
+</head>
+<body>
+<a th:text="${num}"></a>
+<form method="post" action="/count">
+    <button type="submit" name="countUp">CountUp</button>
+    <button type="submit" name="Reset">Reset</button>
+</form>
+</body>
+</html>
